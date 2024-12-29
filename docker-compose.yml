@@ -5,7 +5,8 @@ services:
     image: minio/minio:latest
     container_name: minio-container
     ports:
-      - "9003:9003"
+      - "9003:9003" # Console do MinIO
+      - "9000:9000" # API S3
     environment:
       MINIO_ROOT_USER: miniouser
       MINIO_ROOT_PASSWORD: miniosecret
